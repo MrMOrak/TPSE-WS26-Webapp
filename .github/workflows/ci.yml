@@ -3,7 +3,6 @@ name: CI
  
 on:
   push:
-    branches: [main]
   pull_request:
  
 # Laufende Runs für denselben Branch/PR abbrechen, wenn neu gepusht wird
