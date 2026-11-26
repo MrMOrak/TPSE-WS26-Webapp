@@ -42,10 +42,14 @@
    `git status`
 2. Stage your changes:
    `git add "filename"`
+
    ![Staging changes in VS Code](image-3.png)
+
 3. Commit with the ticket number (in capital letters) and a short description of the changes:
    `git commit -m "TPSE-7: added pipeline for frontend and backend testing"`
+   
    ![Committing changes in VS Code](image-4.png)
+
 4. Update your branch with the latest master:
    `git pull origin master`
    - If Git reports merge conflicts: open the affected files, resolve the conflict markers
