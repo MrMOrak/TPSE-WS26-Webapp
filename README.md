@@ -76,6 +76,12 @@ Monolithic web app with a layered architecture.
 | Maximilian Manikowski | maximilian.manikowski@stud.tu-darmstadt.de            |
 | Nicholas White        | nicholas.white@stud.tu-darmstadt.de                   |
 
+## Reviews
+
+The master branch is protected and can only be altered by issuing a pull-request. 
+The PR is checked in accordance with these [criteria](./documentation/CODEREVIEW.md).
+[Contribution guideline](./documentation/CONTRIBUTION.md).
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
