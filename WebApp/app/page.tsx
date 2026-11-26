@@ -1,7 +1,7 @@
-import Navigationbar from './Navigationbar/navigationbar';
-
 export default function SimpleContainer() {
   return (
-    <Navigationbar/>
+    <h1>
+      Hi
+     </h1> 
   );
 }

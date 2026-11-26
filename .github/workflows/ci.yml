@@ -16,37 +16,36 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Backend   # ANPASSEN: Ordner deines Backends
+        working-directory: Backend  
     steps:
       - uses: actions/checkout@v4
  
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"     # ANPASSEN: deine Python-Version
+          python-version: "3.11"     
           cache: pip
-          cache-dependency-path: Backend/requirements.txt
+          cache-dependency-path: Backend/requirements-dev.txt
  
       - name: Dependencies installieren
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
  
       - name: Unit-Tests
-        if: false   # TODO: aktivieren, sobald es Tests gibt
-        run: pytest
+        run: pytest --cov
  
   frontend:
     name: Frontend (Next.js)
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: WebApp  # ANPASSEN: Ordner deines Frontends
+        working-directory: WebApp  
     steps:
       - uses: actions/checkout@v4
  
       - uses: actions/setup-node@v4
         with:
-          node-version: 22           # ANPASSEN: deine Node-Version
+          node-version: 22          
           cache: npm
           cache-dependency-path: WebApp/package-lock.json
  
@@ -57,8 +56,7 @@ jobs:
         run: npm run lint
  
       - name: Unit-Tests
-        if: false   # TODO: aktivieren, sobald es Tests gibt
-        run: npm test
+        run: npm run test:coverage
  
       - name: Build prüfen
         run: npm run build
